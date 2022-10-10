@@ -21,12 +21,17 @@
 			height:100px; 
 			top: 50px; 
 			left: 50px; 
-			background-color: pink; /* To kasujemy po dodaniu animacji */
-			/* Może zaokrąglone rogi? */
-			/* Tutaj przyda się jakaś animacja */ 
+			border-radius: 50%;
+			animation-name: zadanie;
+			animation-duration: 1.5s;
+			animation-iteration-count: infinite;
 		}
 
-		/* Klatki animacji - zmiana tła z czarnego na biały */
+		@keyframes zadanie {
+			0% { background-color: #000; }
+			50% { background-color: #fff; }
+			100% { background-color: #000; }
+		}
 
 
 	</style>
