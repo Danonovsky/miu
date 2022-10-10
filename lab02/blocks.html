@@ -53,6 +53,7 @@
 		  width: 100px;
 		  height: 40px;
 		  position: absolute;
+		  box-sizing: border-box;
 		  left: 0;
 		  animation: illusion 9s linear infinite alternate;
 		}
@@ -74,6 +75,31 @@
 		  }
 		}
 
+		.center {
+			text-align: center;
+		}
+
+		.border {
+			border: solid 1px red;
+		}
+
+		.button {
+			border-radius: 5px;
+			padding: 5px;
+			color: #fff;
+			background: #69f;
+			border: solid 2px #7ae;
+		}
+
+		.button:hover {
+			cursor: pointer;
+		}
+
+		.active {
+			background: #36d;
+			border-color: #03a;
+		}
+
 	</style>
 	<script
 	  src="http://code.jquery.com/jquery-3.3.1.min.js"
@@ -81,19 +107,35 @@
 	  crossorigin="anonymous"></script>
 	<script type="text/javascript">
 	  $(function(){
-		$("body").on("click", "a", function(e) {
-		  e.preventDefault();
-		  $("#track").toggleClass("proof");
+		$(".button").on('click', function(e) {
+			e.preventDefault();
+			$(this).toggleClass('active');
+		});
+		$("#background").on('click', function(e) {
+			e.preventDefault();
+			$("#track").toggleClass('proof');
+		});
+		$("#whiteBox").on('click', function(e) {
+			e.preventDefault();
+			$(".block.light").toggleClass('border');
+		});
+		$("#blackBox").on('click', function(e) {
+			e.preventDefault();
+			$(".block.dark").toggleClass('border');
 		});
 	  });
 	</script>
 </head>
 
 <body>
-<a href='#'>Toggle</a>
-<div id='track'>
-  <div class='block light'></div>
-  <div class='block dark'></div>
-</div>
+	<div class="center">
+		<button id="background" class="button active">Background</button>
+		<button id="whiteBox" class="button">White box border</button>
+		<button id="blackBox" class="button">Black box border</button>
+	</div>
+	<div id='track'>
+		<div class='block light'></div>
+		<div class='block dark'></div>
+	</div>
 </body>
 </html>
