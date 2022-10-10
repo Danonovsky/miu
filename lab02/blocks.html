@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Moving blocks on stripped background</title>
+	<style type="text/css">
+		html {
+		  background: #999;
+		  padding: 0;
+		}
+
+		body {
+		  margin: 0;
+		  padding: 0;
+		}
+
+		a {
+		  font-family: sans-serif;
+		  font-size: 20px;
+		  font-weight: bold;
+		  line-height: 1;
+		  text-decoration: none;
+		  display: inline-block;
+		  padding: 10px;
+		  background: #000;
+		  color: #fff;
+		}
+		a:hover, a:focus {
+		  text-decoration: underline;
+		}
+
+		#track {
+		  background-color: #999;
+		  background-image: linear-gradient(90deg, #000 0%, #000 50%, #fff 50%, #fff 100%);
+		  background-size: 50px 50px;
+		  border: 1px solid #000;
+		  width: 675px;
+		  height: 225px;
+		  position: absolute;
+		  top: 0;
+		  right: 0;
+		  bottom: 0;
+		  left: 0;
+		  margin: auto;
+		  padding: 0;
+		}
+		
+		#track.proof {
+		  background-image: none;
+		}
+
+		.block {
+		  width: 100px;
+		  height: 40px;
+		  position: absolute;
+		  left: 0;
+		  animation: illusion 9s linear infinite alternate;
+		}
+		.block.light {
+		  background: #fff;
+		  top: 10px;
+		}
+		.block.dark {
+		  background: #000;
+		  bottom: 10px;
+		}
+
+		@keyframes illusion {
+		  from {
+			left: 0;
+		  }
+		  to {
+			left: calc(100% - 100px);
+		  }
+		}
+
+	</style>
+	<script
+	  src="http://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+	<script type="text/javascript">
+	  $(function(){
+		$("body").on("click", "a", function(e) {
+		  e.preventDefault();
+		  $("#track").toggleClass("proof");
+		});
+	  });
+	</script>
+</head>
+
+<body>
+<a href='#'>Toggle</a>
+<div id='track'>
+  <div class='block light'></div>
+  <div class='block dark'></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Circles illusion</title>
+	<style type="text/css">
+		body { background: #39F; }
+
+		.container { width:450px;  height: 300px;  margin: 0 auto;  border: 1 px solid #000;} 
+		.container:nth-child(odd) { width:700px;  height: 100%;  margin: 0 auto;  border: 1 px solid #000; text-align:center;} 
+
+		.container > div {float: left;}
+		.container:hover > div.circle { background:none;}
+
+		div.circle {width: 200px;  height: 200px;  border-radius: 50%;  background: #000;}
+		div.circle:nth-child(even) {background: #fff; margin-left: 50px;}
+
+		div.circle-inner { 
+			position:relative; 
+			width:100px; 
+			height:100px; 
+			top: 50px; 
+			left: 50px; 
+			background-color: pink; /* To kasujemy po dodaniu animacji */
+			/* Może zaokrąglone rogi? */
+			/* Tutaj przyda się jakaś animacja */ 
+		}
+
+		/* Klatki animacji - zmiana tła z czarnego na biały */
+
+
+	</style>
+	<!-- <script
+	  src="http://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>-->
+	<script type="text/javascript">
+	  /*$(function(){
+
+	  });*/
+	</script>
+</head>
+
+<body>
+<br/>
+
+<div class="container">
+    <h1>Animacja zmiany jasności wewnętrznych kół.</h1>
+    <p>Najedź na zewnętrzne koło, aby je ukryć i sprawdzić czy coś zostało źle zaimplementowane, czy to tylko iluzja.</p>
+</div>
+
+<div class="container">
+    <div class="circle">
+        <div class="circle-inner"></div>
+    </div>
+    <div class="circle">
+        <div class="circle-inner"></div>
+    </div>
+</div>
+</body>
+</html>
