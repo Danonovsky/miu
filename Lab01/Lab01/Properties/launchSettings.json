@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Lab01": {
+      "commandName": "Project",
+      "commandLineArgs": "3 + 5"
+    }
+  }
+}
