@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Multimedia tags test</title>
+	  <script
+	  src="http://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+	  <style>
+		.animalButton
+		{
+			width: 90px;
+			height: 90px;
+		}
+		.progressBar
+		{
+			width: 500px;
+			height: 20px;
+			background-color: blue;
+			margin-left: 70px;
+		}
+	  </style>
+	  <script type="text/javascript">
+
+		function animalClicked(imgBtn)
+		{
+			//var audio = document.getElementById("sound"+imgBtn.id);
+			imgBtn.style.backgroundColor = "green";
+		}
+
+	  </script>
+</head>
+
+<body>
+<p>
+	<br />
+
+</p>
+<div>
+	<img id="Horse" class="animalButton" onclick="animalClicked(this)" src="images/horse.svg"> <br>
+</div>
+<!--
+Horse by Samy Menai from the Noun Project
+-->
+
+
+<div>
+	<div id="videoProgressBar" class="progressBar"></div>
+<div>
+<script type="text/javascript">
+	$("#videoProgressBar").click(function(e){
+        var x = e.pageX - this.offsetLeft;
+        var y = e.pageY - this.offsetTop;
+		var width = $(this).width();
+		alert("kliknięto pozycję "+x+" w elemencie szerokości: "+width);
+   }); 
+</script>
+</body>
+</html>
