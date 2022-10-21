@@ -23,10 +23,19 @@
 	  </style>
 	  <script type="text/javascript">
 
-		function animalClicked(imgBtn)
+		async function animalClicked(imgBtn)
 		{
-			//var audio = document.getElementById("sound"+imgBtn.id);
-			imgBtn.style.backgroundColor = "green";
+			let audio = document.getElementById("sound"+imgBtn.id);
+			let time = audio.duration;
+			audio.play();
+			await imgBtn.animate({transform: 'scale(2)'},{duration: time*1000});
+			setTimeout(() => {
+				imgBtn.style.transform = 'scale(2)';
+				imgBtn.animate({transform: 'scale(1)'},{duration:500});
+				setTimeout(() => {
+					imgBtn.style.transform = 'scale(1)';
+				}, 500);
+			}, time*1000);
 		}
 
 	  </script>
@@ -38,7 +47,22 @@
 
 </p>
 <div>
+	<audio id="soundHorse">
+		<source src="audio/horse.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="soundFrog">
+		<source src="audio/frog.wav" type="audio/wav">
+	</audio>
+	<audio id="soundElephant">
+		<source src="audio/elephant.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="soundRooster">
+		<source src="audio/rooster.mp3" type="audio/mpeg">
+	</audio>
 	<img id="Horse" class="animalButton" onclick="animalClicked(this)" src="images/horse.svg"> <br>
+	<img id="Frog" class="animalButton" onclick="animalClicked(this)" src="images/frog.svg"> <br>
+	<img id="Elephant" class="animalButton" onclick="animalClicked(this)" src="images/elephant.svg"> <br>
+	<img id="Rooster" class="animalButton" onclick="animalClicked(this)" src="images/rooster.svg"> <br>
 </div>
 <!--
 Horse by Samy Menai from the Noun Project
