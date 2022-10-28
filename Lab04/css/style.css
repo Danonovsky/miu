@@ -72,6 +72,15 @@ nav img {
     nav {
         flex-direction: row;
     }
+    .description {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .nav-item .description {
+        display: block;
+    }
 }
 
 @media screen and (min-width: 800px) {
@@ -81,10 +90,6 @@ nav img {
 
     .logo-short {
         display: none;
-    }
-
-    .nav-item .description {
-        display: block;
     }
     
     .container {
