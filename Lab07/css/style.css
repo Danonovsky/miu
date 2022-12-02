@@ -1,0 +1,72 @@
+:root {
+    --primary-background: black;
+    --primary-color: white;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+nav {
+    background: var(--primary-background);
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 5px;
+    transition: ease 0.2s;
+    box-sizing: border-box;
+    border: double 4px var(--primary-background);
+}
+
+nav a:hover {
+    border: double 4px white;
+}
+
+header {
+    margin-top: 1.5em;
+}
+
+textarea {
+    width: 100%;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.gallery-item {
+    width: 33%;
+    aspect-ratio: 1/1;
+}
+
+.form-item {
+    margin: 10px 0 10px 0;
+}
+
+.col-50 {
+    width: 49%;
+    padding: 10px;
+    box-sizing: border-box;
+}

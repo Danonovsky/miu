@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona o szopach</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="#o-szopach" role="button">O szopach</a>
+        <a href="#czy-jestes-szopem" role="button">Czy jesteś szopem?</a>
+        <a href="#galeria" role="button">Galeria</a>
+        <a href="#kontakt" role="button">Kontakt</a>
+    </nav>
+    <header>
+        <img src="img/logo.jfif" alt="">
+    </header>
+    <main class="container">
+        <section id="o-szopach">
+            <h1 class="text-center">Strona o szopach</h1>
+            <div class="d-flex">
+                <div>
+                    <p>Witaj na stronie poświęconej szopom.</p>
+                    <p>Wspólnie wierzymy, że możemy zmienić postrzeganie tego słodkiego i przyjaznego stworzenia w Polsce.</p>
+                </div>
+                <div>
+                    <img src="img/szop-1.webp" alt="Zdjęcie przedstawiające słodkiego szopa">
+                </div>
+            </div>
+        </section>
+        <section id="czy-jestes-szopem">
+            <h2 class="text-center">Czy jesteś szopem?</h2>
+            <div class="d-flex">
+                <div>
+                    <p>Aby odpowiedzieć sobie na to nietrywialne pytanie, musisz sprawdzić czy:</p>
+                    <ul>
+                        <li>masz cienie pod oczami?</li>
+                        <li>jesz śmieciowe jedzenie?</li>
+                        <li>jesteś mały/a i gruby/a?</li>
+                        <li>nie śpisz w nocy?</li>
+                    </ul>
+                </div>
+                <div style="flex-shrink: 5;">
+                    <img src="img/quiz.webp" alt="Zdjęcie przedstawiające napis QUIZ">
+                </div>
+            </div>
+        </section>
+        <section id="galeria">
+            <h2 class="text-center">Galeria</h2>
+            <div class="d-flex">
+                <div>
+                    <img class="gallery-item" src="https://static.prsa.pl/images/8ba79e9b-9b42-4beb-8998-48a0d50c5b26.file?format=700" alt="">
+                    <img class="gallery-item" src="https://tvn24.pl/tvnmeteo/najnowsze/cdn-zdjecie21b5abf6bca95661b22e226a0d7ac5db-szop-pracz-to-pozornie-niegrozne-zwierze-2158387/alternates/FOUR_THREE_1280" alt="">
+                    <img class="gallery-item" src="https://dziendobry.tvn.pl/cdn-zdjecie-9d3l5b-gettyimages/alternates/SQUARE_1280" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="kontakt">
+            <h2 class="text-center">Kontakt</h2>
+            <div class="d-flex contact">
+                <div class="col-50">
+                    <div class="form-item">
+                        <label for="imie">Imię</label>
+                        <input id="imie" name="imie" type="text">
+                    </div>
+                    <div class="form-item">
+                        <label for="plec">Płeć</label>
+                        <select id="plec" name="plec">
+                            <option value="mezczyzna">Pan Szop</option>
+                            <option value="kobieta">Pani Szop</option>
+                        </select>
+                    </div>
+                    <fieldset class="form-item">
+                        <legend>Czy masz szopa?</legend>
+                        <input type="radio" name="czyMaszSzopa" id="tak">
+                        <label for="tak">Tak</label>
+                        <input type="radio" name="czyMaszSzopa" id="nie">
+                        <label for="nie">Nie</label>
+                    </fieldset>
+                </div>
+                <div class="col-50">
+                    <label for="tresc">Treść</label><br>
+                    <textarea name="tresc" id="tresc" rows="10"></textarea>
+                </div>
+            </div>
+            <button>Wyślij</button>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <h3>Stopka</h3>
+            <p>Tutaj zawsze są informacje podsumowujące, itd.</p>
+            <p><a href="https://pl.wikipedia.org/wiki/Szop_pracz">Szop wg wikipedii</a></p>
+            <p><a href="https://poza-domem.pl/szop-pracz-w-domu">Czy można udomawiać szopy w Polsce?</a></p>
+            <p><a href="https://podlaskie24.pl/artykul/wydarzenia/tutaj-mozna-poglaskac-szopa-i-nakarmic-malpke-zooland-w-bialymstoku/">Zoo w którym można zobaczyć szopa</a></p>
+        </div>
+    </footer>
+</body>
+</html>
